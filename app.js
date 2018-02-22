@@ -50,4 +50,13 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/demo');
+
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error'));
+db.once('open', function () {
+    console.log('connected !')
+});
+
 module.exports = app;

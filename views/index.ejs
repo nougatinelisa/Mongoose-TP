@@ -1,11 +1,63 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='../public/stylesheets/style.css' />
+    <title>BTS Albums</title>
+    <link rel='stylesheet' href='stylesheets/style.css'/>
+    <link rel='stylesheet' href='stylesheets/homepage.css'/>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="javascripts/homepage.js"></script>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+  
+  <div class="Page-header">
+    <img src="images/banner.jpg" class="Page-header-img" alt="banner website mongoose">
+    <div class="introduction-block">
+        <h1>BTS Albums</h1>
+        <p>Welcome to The BTS Albums paradise which references all BTS albums and allows you to add more if you want.
+            Have fun making your very own list !</p>
+    </div>
+  </div>
+  
+  <div class="Page-content">
+
+      <div class="Album-form">
+          <form method="post" action="/" >
+              <div>
+                  <label class="albumTitle-label" for="album-title">Enter the name of an album</label>
+                  <input type="text" name="albumTitle" id="album-title" placeholder="ex: You never walk alone">
+              </div>
+
+              <div>
+                  <label for="album-image"></label>
+                  <input type="file" name="albumImage" id="album-image">
+              </div>
+              <button class="button-addAlbum" type="submit">Submit</button>
+          </form>
+      </div>
+
+    <ul class="Albums-block">
+      <% albums.forEach(function(album) { %>
+        <li class="Album-block">
+            <% if(album.image) { %>
+                <img src="images/<%= album.image %>">
+            <% } else { %>
+                <div class="Album-block-noVisual"></div>
+            <% } %>
+            <div class="Album-block-label">
+                <%= album.title %>
+            </div>
+            <button id="btn-<%= album._id %>" class="album-button">Supprimer l'album</button>
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+
+  <div class="Page-footer">
+      <ul>
+          <li>Mentions légales</li>
+          <li>© BTS albums</li>
+      </ul>
+  </div>
+
   </body>
 </html>

@@ -1,0 +1,132 @@
+.introduction-block {
+    background-color: #373d80;
+    position: absolute;
+    top: 420px;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 40px;
+    color: white;
+    width: 800px;
+}
+
+.Page-header-img {
+    max-width: 1903px;
+}
+
+.Page-content {
+    max-width: 1200px;
+    margin: 150px auto 50px;
+    padding: 0 50px;
+}
+
+
+/* Album block form */
+
+.Album-form {
+    background-color: #5b5c65;
+    color: white;
+    margin: 0 auto 80px;
+    padding: 30px 0;
+}
+
+.Album-form div {
+    margin: 0 0 20px;
+}
+
+.albumTitle-label {
+    margin-right: 10px;
+}
+
+#album-title {
+    background-color: #5b5c65;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+#album-title::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #afafaf;
+    opacity: 1; /* Firefox */
+}
+
+#album-title:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #afafaf;
+}
+
+#album-title:-ms-input-placeholder { /* Microsoft Edge */
+    color: #afafaf;
+}
+
+.button-addAlbum {
+    width: 100px;
+    background-color: #373d80;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+/* Album block list */
+.Albums-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.Album-block {
+    list-style: none;
+    margin: 0 0 20px 5px;
+}
+
+.Album-block-label {
+    background-color: #373d80;
+    padding: 20px 0;
+    color: white;
+}
+
+.Album-block img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+}
+
+.Album-block button {
+    width: 100%;
+    background-color: black;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.Album-block-noVisual {
+    width: 200px;
+    height: 200px;
+    background-color: lightgrey;
+}
+
+/* Block footer */
+
+.Page-footer {
+    background-color: black;
+}
+
+.Page-footer ul {
+    margin: 0;
+    color: white;
+    list-style: none;
+    padding: 10px 0;
+    text-align: right;
+}
+
+.Page-footer li {
+    display: inline-block;
+    font-size: 0.9em;
+    margin-right: 20px;
+    color: #afafaf;
+    font-weight: 600;
+}
